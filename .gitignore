@@ -1,0 +1,14 @@
+# Model files (regenerate via scripts/)
+*.pte
+tokenizer.json
+.venv/
+
+# Xcode
+build/
+DerivedData/
+*.xcuserstate
+*.xcworkspace
+xcuserdata/
+
+# macOS
+.DS_Store

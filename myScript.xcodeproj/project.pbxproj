@@ -6,6 +6,18 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E855F8C72F414F6300A20A2C /* backend_coreml in Frameworks */ = {isa = PBXBuildFile; productRef = E855F8C62F414F6300A20A2C /* backend_coreml */; };
+		E855F8CB2F414F6300A20A2C /* backend_mps in Frameworks */ = {isa = PBXBuildFile; productRef = E855F8CA2F414F6300A20A2C /* backend_mps */; };
+		E855F8CF2F414F6300A20A2C /* backend_xnnpack in Frameworks */ = {isa = PBXBuildFile; productRef = E855F8CE2F414F6300A20A2C /* backend_xnnpack */; };
+		E855F8D32F414F6300A20A2C /* executorch in Frameworks */ = {isa = PBXBuildFile; productRef = E855F8D22F414F6300A20A2C /* executorch */; };
+		E855F8D72F414F6300A20A2C /* executorch_llm in Frameworks */ = {isa = PBXBuildFile; productRef = E855F8D62F414F6300A20A2C /* executorch_llm */; };
+		E855F8DB2F414F6300A20A2C /* kernels_llm in Frameworks */ = {isa = PBXBuildFile; productRef = E855F8DA2F414F6300A20A2C /* kernels_llm */; };
+		E855F8DF2F414F6300A20A2C /* kernels_optimized in Frameworks */ = {isa = PBXBuildFile; productRef = E855F8DE2F414F6300A20A2C /* kernels_optimized */; };
+		E855F8E32F414F6300A20A2C /* kernels_quantized in Frameworks */ = {isa = PBXBuildFile; productRef = E855F8E22F414F6300A20A2C /* kernels_quantized */; };
+		E855F8E72F414F6300A20A2C /* kernels_torchao in Frameworks */ = {isa = PBXBuildFile; productRef = E855F8E62F414F6300A20A2C /* kernels_torchao */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		E855F7C12F412A0300A20A2C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +39,7 @@
 		E855F7B12F412A0100A20A2C /* myScript.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myScript.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E855F7C02F412A0300A20A2C /* myScriptTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myScriptTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E855F7CA2F412A0300A20A2C /* myScriptUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myScriptUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E855F7DD2F412A0900A20A2C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -52,6 +65,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E855F8D32F414F6300A20A2C /* executorch in Frameworks */,
+				E855F8D72F414F6300A20A2C /* executorch_llm in Frameworks */,
+				E855F8C72F414F6300A20A2C /* backend_coreml in Frameworks */,
+				E855F8CB2F414F6300A20A2C /* backend_mps in Frameworks */,
+				E855F8CF2F414F6300A20A2C /* backend_xnnpack in Frameworks */,
+				E855F8DB2F414F6300A20A2C /* kernels_llm in Frameworks */,
+				E855F8DF2F414F6300A20A2C /* kernels_optimized in Frameworks */,
+				E855F8E32F414F6300A20A2C /* kernels_quantized in Frameworks */,
+				E855F8E72F414F6300A20A2C /* kernels_torchao in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +97,7 @@
 		E855F7A82F412A0100A20A2C = {
 			isa = PBXGroup;
 			children = (
+				E855F7DD2F412A0900A20A2C /* README.md */,
 				E855F7B32F412A0100A20A2C /* myScript */,
 				E855F7C32F412A0300A20A2C /* myScriptTests */,
 				E855F7CD2F412A0300A20A2C /* myScriptUITests */,
@@ -112,6 +135,15 @@
 			);
 			name = myScript;
 			packageProductDependencies = (
+				E855F8C62F414F6300A20A2C /* backend_coreml */,
+				E855F8CA2F414F6300A20A2C /* backend_mps */,
+				E855F8CE2F414F6300A20A2C /* backend_xnnpack */,
+				E855F8D22F414F6300A20A2C /* executorch */,
+				E855F8D62F414F6300A20A2C /* executorch_llm */,
+				E855F8DA2F414F6300A20A2C /* kernels_llm */,
+				E855F8DE2F414F6300A20A2C /* kernels_optimized */,
+				E855F8E22F414F6300A20A2C /* kernels_quantized */,
+				E855F8E62F414F6300A20A2C /* kernels_torchao */,
 			);
 			productName = myScript;
 			productReference = E855F7B12F412A0100A20A2C /* myScript.app */;
@@ -195,6 +227,9 @@
 			);
 			mainGroup = E855F7A82F412A0100A20A2C;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				E855F8C52F414F6300A20A2C /* XCRemoteSwiftPackageReference "executorch" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = E855F7B22F412A0100A20A2C /* Products */;
 			projectDirPath = "";
@@ -394,21 +429,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = myScript/myScript.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9QA9K4TQ94;
-				ENABLE_APP_SANDBOX = YES;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "myScript needs microphone access to transcribe meeting audio in real-time.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kirillpav.myScript;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -426,21 +463,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = myScript/myScript.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9QA9K4TQ94;
-				ENABLE_APP_SANDBOX = YES;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "myScript needs microphone access to transcribe meeting audio in real-time.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kirillpav.myScript;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -573,6 +612,65 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E855F8C52F414F6300A20A2C /* XCRemoteSwiftPackageReference "executorch" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pytorch/executorch.git";
+			requirement = {
+				branch = "swiftpm-1.0.0";
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E855F8C62F414F6300A20A2C /* backend_coreml */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E855F8C52F414F6300A20A2C /* XCRemoteSwiftPackageReference "executorch" */;
+			productName = backend_coreml;
+		};
+		E855F8CA2F414F6300A20A2C /* backend_mps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E855F8C52F414F6300A20A2C /* XCRemoteSwiftPackageReference "executorch" */;
+			productName = backend_mps;
+		};
+		E855F8CE2F414F6300A20A2C /* backend_xnnpack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E855F8C52F414F6300A20A2C /* XCRemoteSwiftPackageReference "executorch" */;
+			productName = backend_xnnpack;
+		};
+		E855F8D22F414F6300A20A2C /* executorch */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E855F8C52F414F6300A20A2C /* XCRemoteSwiftPackageReference "executorch" */;
+			productName = executorch;
+		};
+		E855F8D62F414F6300A20A2C /* executorch_llm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E855F8C52F414F6300A20A2C /* XCRemoteSwiftPackageReference "executorch" */;
+			productName = executorch_llm;
+		};
+		E855F8DA2F414F6300A20A2C /* kernels_llm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E855F8C52F414F6300A20A2C /* XCRemoteSwiftPackageReference "executorch" */;
+			productName = kernels_llm;
+		};
+		E855F8DE2F414F6300A20A2C /* kernels_optimized */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E855F8C52F414F6300A20A2C /* XCRemoteSwiftPackageReference "executorch" */;
+			productName = kernels_optimized;
+		};
+		E855F8E22F414F6300A20A2C /* kernels_quantized */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E855F8C52F414F6300A20A2C /* XCRemoteSwiftPackageReference "executorch" */;
+			productName = kernels_quantized;
+		};
+		E855F8E62F414F6300A20A2C /* kernels_torchao */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E855F8C52F414F6300A20A2C /* XCRemoteSwiftPackageReference "executorch" */;
+			productName = kernels_torchao;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E855F7A92F412A0100A20A2C /* Project object */;
 }

@@ -1,32 +1,30 @@
-//
-//  myScriptApp.swift
-//  myScript
-//
-//  Created by Kirill Pavlov on 2/14/26.
-//
-
 import SwiftUI
-import SwiftData
 
 @main
 struct myScriptApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
+    @State private var appState = AppState()
 
     var body: some Scene {
-        WindowGroup {
-            ContentView()
+        MenuBarExtra {
+            MenuBarView()
+                .environment(appState)
+        } label: {
+            HStack(spacing: 4) {
+                Image(systemName: appState.isRecording ? "waveform.circle.fill" : "waveform.circle")
+                    .symbolRenderingMode(.hierarchical)
+            }
         }
-        .modelContainer(sharedModelContainer)
+        .menuBarExtraStyle(.window)
+
+        Window("Transcript", id: "transcript") {
+            TranscriptWindowView()
+                .environment(appState)
+                .task {
+                    if appState.modelState == .notLoaded {
+                        await appState.loadModel()
+                    }
+                }
+        }
+        .defaultSize(width: 600, height: 500)
     }
 }

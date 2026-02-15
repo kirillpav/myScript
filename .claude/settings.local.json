@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:docs.pytorch.org)",
+      "Bash(git -C /Users/kirillpavlov/Projects/myScript diff HEAD)",
+      "Bash(xcodebuild:*)",
+      "Bash(bash scripts/setup_env.sh)",
+      "Bash(source:*)",
+      "Bash(python -m executorch.extension.audio.mel_spectrogram:*)",
+      "Bash(python:*)",
+      "Bash(pip show:*)"
+    ]
+  }
+}
